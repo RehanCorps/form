@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIT Offer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --neon-text: linear-gradient(90deg, rgb(0, 123, 255), rgb(0, 230, 111), rgb(229, 255, 0), rgb(208, 0, 255));
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .slide-in-left,
+        .slide-in-bottom {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 1s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        body {
+            background: black;
+        }
+
+        header {
+            height: 150vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 0 3rem;
+            margin: 2rem 2rem;
+        }
+
+
+        header img {
+            height: 50vh;
+            margin-top: 0%;
+            border-radius: 30px;
+        }
+
+        header h1 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 2rem;
+            font-size: 3rem;
+            margin-top: 0rem;
+            font-weight: 600;
+        }
+
+        header h1 span {
+            background: white;
+            border-radius: 30px;
+            color: black;
+            padding: 1rem 2rem;
+        }
+
+        header p {
+            color: rgb(189, 189, 189);
+            font-size: 1.2rem;
+        }
+
+        header p2 {
+            color: rgb(166, 166, 166);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        header n {
+            transition: all 0.3s ease;
+        }
+
+        header btn a {
+            padding: 1.2rem 1rem;
+            background-color: rgb(137, 136, 136);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        header btn a:hover {
+            background-color: white;
+        }
+
+        header btn n {
+            font-size: 2rem;
+            margin-right: 1rem;
+            display: inline-block;
+            color: white;
+            animation: point-right 1s infinite ease-in-out;
+        }
+
+        @keyframes point-right {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        hero h1 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        hero p {
+            color: rgb(210, 210, 210);
+            font-size: 1.2rem;
+            margin: 1rem 4rem;
+        }
+
+        @media (max-width:768px) {
+            header {
+                height: 160vh;
+                margin: 2rem 0rem;
+                padding: 0 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header h1 span {
+                padding: 0.4rem 2rem;
+                border-radius: 10px;
+            }
+
+            hero {
+                height: 110vh;
+            }
+
+            hero h1 {
+                font-size: 2.3rem;
+            }
+
+            hero p {
+                margin: 1rem 1rem;
+                gap: 0rem;
+            }
+
+            .container .text-6xl {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray font-sans">
+    <header>
+
+        <img class="slide-in-bottom" src="images.png" alt="">
+        <h1 class="slide-in-bottom">The chance for your first step in <span>Digital presence</span> </h1>
+        <p class="slide-in-bottom"><span style="color: rgb(255, 255, 255); font-weight: 600;">Rehnova digitals</span>
+            presents you the all in
+            one <span style="font-weight: 600; color: white;">"BIT OFFER"</span>.For just <span
+                style="color: rgb(123, 250, 123);">$30</span>, we’re giving you a complete digital starter pack: a
+            2-page website, a chatbot integrated into it, and one task automation to save your time. This limited-time
+            community offer is available for 1st to 3rd SEP only. — don’t miss it!</p>
+        <p class="slide-in-bottom">⚡ “This offer is made by our team exclusively for a few members only— we believe you
+            deserve the tools that
+            bigger businesses use, at a price you can easily afford”</p>
+        <btn class="slide-in-bottom">
+            <n>👉</n><a href="#offer-form">Book your slot now</a>
+        </btn>
+        <p2 class="slide-in-bottom">⚠️ Note: “Only valid for 3 days. Don’t miss this opportunity to get started!”</p2>
+    </header>
+    <hero class="slide-in-bottom">
+        <h1>φ Why this Matters</h1>
+        <p>“In today’s world, having a website, automation, and a chatbot is no longer a luxury — it’s a necessity. With
+            this offer, you’ll get everything you need to launch your online presence, engage your customers, and save
+            hours of manual work — all at the lowest possible cost.”</p>
+        <p>
+            3 quick highlights</p>
+        <p>Ξ Affordable entry into the digital world</p>
+        <p>Ξ Tools that make your work easier & smarter</p>
+        <p>Ξ Limited-time, exclusive access
+        </p>
+    </hero>
+    <div class=" container mx-auto p-4 max-w-2xl">
+        <h1 class="slide-in-bottom text-6xl font-bold text-center text-white mb-6">Submit Your Θffer</h1>
+
+        <form id="offer-form" class="slide-in-bottom bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="mb-4">
+                <label for="offerTitle" class="block text-white font-semibold mb-2">Purpose</label>
+                <input type="text" name="purpose" placeholder="e.g, I need for..." id="purpose"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-white-500" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="description" class="block text-white font-semibold mb-2">Service Description</label>
+                <textarea type="text" name="description" id="description" placeholder="e.g, It should be like..."
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-white-500" rows="4"
+                    required></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="name" class="block text-white font-semibold mb-2">Your Name</label>
+                <input type="name" name="name" placeholder="Full Name" id="name"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-white-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-white font-semibold mb-2">Your Email</label>
+                <input type="email" name="email" id="email" placeholder="Email Address"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-white-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="amount" class="block text-white font-semibold mb-2">Whatsapp</label>
+                <input type="text" name="Number" placeholder="whatsapp Number" id="number"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-white-500" required>
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-800 transition">Submit</button>
+        </form>
+
+        <div id="feedback" class="hidden mb-6 p-4 rounded-md">
+            <p id="feedback-message" class="text-center"></p>
+        </div>
+
+        <div id="offer-display" class="hidden bg-white p-6 rounded-lg shadow-md mb-8">
+            <p><strong>Submission Time:</strong> <span id="time"></span></p>
+        </div>
+
+        <div class="slide-in-bottom bg-black p-6 rounded-lg shadow-md">
+            <h2 class="text-4xl font-semibold text-white mb-4">About this Offer</h2>
+            <p class="text-white mb-4">
+                Thank you for submitting your form! Our platform connects buyers and sellers with exclusive deals.
+                Your will be reviewed by our team within 24–48 hours, and we’ll contact you via email for next steps.
+                Key points about submitting offer:
+            </p>
+            <ul class="list-disc pl-6 text-gray-600">
+                <li>This offer doesn't include additionals.</li>
+                <li>For Add-ons, you will be charged separately.</li>
+                <li>Since our team provided this as an offer for new individuals to take a first step. So, None should
+                    consider it real value of the services.</li>
+                <li>All submissions are processed securely via our automated system.</li>
+                <li>Contact us at info.rehnova@gmail.com for questions or updates.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('offer-form');
+        const feedback = document.getElementById('feedback');
+        const feedbackMessage = document.getElementById('feedback-message');
+        const offerDisplay = document.getElementById('offer-display');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch('https://rehnova.app.n8n.cloud/webhook/f2a6d29e-72a2-463e-a5ce-5d9a854953ec', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    feedback.classList.remove('hidden');
+                    feedback.classList.add('bg-green-100', 'text-green-700', 'slide-in');
+                    feedbackMessage.textContent = 'Offer submitted successfully!';
+
+                    document.getElementById('time').textContent = new Date().toLocaleString();
+                    offerDisplay.classList.remove('hidden');
+                    offerDisplay.classList.add('slide-in');
+
+                    form.reset();
+                } else {
+                    feedback.classList.remove('hidden');
+                    feedback.classList.add('bg-red-100', 'text-red-700', 'slide-in');
+                    feedbackMessage.textContent = 'Failed to submit offer. Please try again.';
+                }
+            } catch (error) {
+                feedback.classList.remove('hidden');
+                feedback.classList.add('bg-red-100', 'text-red-700', 'slide-in');
+                feedbackMessage.textContent = 'Error: ' + error.message;
+            }
+        });
+
+        // sliding js 
+        const slideElements = document.querySelectorAll('.slide-in-left, .slide-in-bottom');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing after first visibility
+                }
+            });
+        }, {
+            threshold: 0.6
+        });
+
+        slideElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+<footer
+    style="color: grey; font-size: 1rem; display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+    &copy; 2025 Rehnova Digitals. All rights reserved.
+</footer>
+
+</html>
